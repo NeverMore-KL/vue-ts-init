@@ -14,6 +14,11 @@ import store from "./store/index";
 // import { getAppVersion } from "@/utils/index";
 // import { stringify } from "qs";
 import "./utils/polyfill";
+import { Button, Message } from "element-ui";
+Vue.use(Button);
+//@ts-ignore
+Vue.use(Message);
+Vue.prototype.$message = Message;
 Vue.config.productionTip = false;
 if (process.env.NODE_ENV !== "production") {
   // 手机端vconsole调试

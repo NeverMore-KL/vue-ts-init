@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    home
+   <el-button type="primary">123123</el-button>
   </div>
 </template>
 
@@ -61,7 +61,12 @@ export default class Home extends Vue {
     });
   }
   // 生命周期
-  created() {}
+  created() {
+    this.$message({
+      message: "恭喜你，这是一条成功消息",
+      type: "success"
+    });
+  }
 }
 </script>
 <style lang="scss" scoped>
