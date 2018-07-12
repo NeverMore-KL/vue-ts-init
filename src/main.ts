@@ -14,13 +14,12 @@ import store from "./store/index";
 // import { getAppVersion } from "@/utils/index";
 // import { stringify } from "qs";
 import "./utils/polyfill";
-import { Button, Message } from "element-ui";
 // 自定义主题颜色
 import "./style/el-theme.scss";
-Vue.use(Button);
+import Element from "element-ui";
+Vue.use(Element, { size: "small", zIndex: 3000 });
 //@ts-ignore
-Vue.use(Message);
-Vue.prototype.$message = Message;
+// Vue.prototype.$message = Message;
 Vue.config.productionTip = false;
 if (process.env.NODE_ENV !== "production") {
   // 手机端vconsole调试
